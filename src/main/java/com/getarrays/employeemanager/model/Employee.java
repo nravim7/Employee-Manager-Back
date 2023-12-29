@@ -11,6 +11,13 @@ public class Employee implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
+    private String email;
+    private String jobTitle;
+    private String phone;
+
+    private String imageUrl;
+    @Column(nullable = false, updatable = false)
+    private String employeeCode;
 
     public Employee() {
     }
@@ -24,10 +31,6 @@ public class Employee implements Serializable {
         this.imageUrl = imageUrl;
         this.employeeCode = employeeCode;
     }
-
-    private String email;
-    private String jobTitle;
-    private String phone;
 
 
     public Long getId() {
@@ -86,8 +89,5 @@ public class Employee implements Serializable {
         this.employeeCode = employeeCode;
     }
 
-    private String imageUrl;
-    @Column(nullable = false, updatable = false)
-    private String employeeCode;
 
 }
