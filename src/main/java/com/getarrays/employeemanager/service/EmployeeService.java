@@ -3,6 +3,7 @@ package com.getarrays.employeemanager.service;
 import com.getarrays.employeemanager.exception.UserNotFoundException;
 import com.getarrays.employeemanager.model.Employee;
 import com.getarrays.employeemanager.repo.EmployeeRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
     private final EmployeeRepo employeeRepo;
     @Autowired
